@@ -1,8 +1,14 @@
 ---
-title       : Correlations
+title       : Correlation
 description : This module covers correlations in a fun and interactive way.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+
+--- type:VideoExercise xp:50
+## Correlation vs. Causation
+
+*** =video_link
+//www.youtube.com/embed/VMUQSMFGBDo
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:21afc4de08
 ## A really bad movie
