@@ -4,7 +4,7 @@ description : This module covers correlations in a fun and interactive way.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:VideoExercise xp:50
+--- type:VideoExercise xp:50 key:ac82ca6647
 ## Correlation vs. Causation
 
 *** =video_link
