@@ -5,12 +5,16 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise xp:50 key:ac82ca6647
-## Correlation vs. Causation
+## Correlation vs. Causation (Part 1)
 
 *** =video_link
-//www.youtube.com/embed/VMUQSMFGBDo
+//player.vimeo.com/video/115188874
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ugd4k3dC_8Y" frameborder="0" allowfullscreen></iframe>
+--- type:VideoExercise xp:50 key:ac82ca6647
+## Correlation vs. Causation (Part 2)
+
+*** =video_link
+//player.vimeo.com/video/115124741
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:21afc4de08
 ## A really bad movie
