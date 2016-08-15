@@ -35,7 +35,7 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 1, feedback_msgs = c(msg2,msg1))
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 key:03bc384381
+--- type:MultipleChoiceExercise lang:r xp:50
 ## The Scatterplot
 
 A picture is worth a thousand words. Before diving into correlation coefficients, it is usually very helpful to visualize the data. For two continuous variables, we use a **scatterplot** to inspect their relationship. Consider the following three scatterplots. Which scatterplot shows a weak or neglectable correlation?
@@ -63,7 +63,7 @@ msg3 = "Well done. Proceed to the next page"
 test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
 ```
 
---- type:NormalExercise lang:r xp:100 key:683b30e66f
+--- type:NormalExercise lang:r xp:100
 ## Let's make a Scatterplot!
 
 Below are several additional examples of scatterplots, with underlying correlations illustrated as well. 
@@ -111,12 +111,12 @@ test_object("x",
 success_msg("Good job! Head over to the next exercise")
 ```
 
---- type:NormalExercise lang:r xp:50 key:bef890a771
-## Now, it's time for some math
+--- type:NormalExercise lang:r xp:100
+## Correlation Coefficient
 
 Check out how Pearson's correlation coefficient, `r` is calcuated in this [page](http://cnx.org/contents/XgdE-Z55@40.9:XEKQgmhr@12/Correlation-Coefficient-and-Co)
 
-Now, we are going to calculate `r` in R, again, with a line of code. 
+Now, we are going to calculate `r` in R, again, with a line of code. The `cor` value is what you are interested.
 
 *** =instructions
 - Using the same dataset we just plotted, type in the following line in the R console: `cor.test(data$years, data$outcomes)`
@@ -149,141 +149,62 @@ test_object("x",
 success_msg("Good job! Head over to the next exercise")
 ```
 
---- type:NormalExercise lang:r xp:100 key:c986ddf834
-## Check this lesson
+--- type:NormalExercise lang:r xp:100
+## To dive a bit deeper...
 
-http://varianceexplained.org/RData/lessons/lesson3/segment2/
+Check out this [great tutorial](http://varianceexplained.org/RData/lessons/lesson3/segment2/), and play more. 
 
+In this tutorial, the professor used a dataset named `mtcars`. Now, can you plot `mpg` (mile per gallon) and `hp` (horse-power) together using the `plot` function we tried earlier (instead of ggplot2 used by the professor)?
+
+*** =instructions
+- Plot `mpg` and `hp`
+
+*** =hint
+Use the dollar sign (`$`) to query each variable, e.g., `mtcars$mpg`
+
+*** =pre_exercise_code
+```{r}
+# Read data
+data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(2,8,3,6,6,7,9,8,5,6,7,4))
+```
+
+*** =sample_code
+```{r}
+# Plot mpg and hp in mtcars
+```
+
+*** =solution
+```{r}
+# Plot mpg and hp in mtcars
+plot(mtcars$mpg, mtcars$hp)
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("x",
+            incorrect_msg = "Have you correctly calculated r!")
+success_msg("Good job! Head over to the next exercise")
+```
 
 --- type:VideoExercise xp:50 key:ac82ca6647
-## Correlation vs. Causation (Part 1)
+## Extra: Correlation vs. Causation (Part 1)
 
 *** =video_link
 //player.vimeo.com/video/115188874
 
 --- type:VideoExercise xp:50 key:d0e2534974
-## Correlation vs. Causation (Part 2)
+## Extra: Correlation vs. Causation (Part 2)
 
 *** =video_link
 //player.vimeo.com/video/115124741
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 key:faf1fc56ca
-## Correlation vs. Linearity
+## Extra: Correlation vs. Linearity
 
 > The Pearson correlation coefficient indicates the strength of a linear relationship between two variables, but its value generally does not completely characterize their relationship.
 
 Consider the following diagram. Four datasets corresponding to the scatterplots have the same correlation of 0.816, but the distribution of the variables is very different.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/e/ec/Anscombe%27s_quartet_3.svg)
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:21afc4de08
-## A really bad movie
-
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
-
-*** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
-
-*** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
-
-*** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-# You can use it to load packages, initialize datasets and draw a plot in the viewer
-
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-library(ggplot2)
-
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
-```
-
-*** =sct
-```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
-```
-
---- type:NormalExercise lang:r xp:100 skills:1 key:6d2be4c7f1
-## More movies
-
-In the previous exercise, you saw a dataset about movies. In this exercise, we'll have a look at yet another dataset about movies!
-
-A dataset with a selection of movies, `movie_selection`, is available in the workspace.
-
-*** =instructions
-- Check out the structure of `movie_selection`.
-- Select movies with a rating of 5 or higher. Assign the result to `good_movies`.
-- Use `plot()` to  plot `good_movies$Run` on the x-axis, `good_movies$Rating` on the y-axis and set `col` to `good_movies$Genre`.
-
-*** =hint
-- Use `str()` for the first instruction.
-- For the second instruction, you should use `...[movie_selection$Rating >= 5, ]`.
-- For the plot, use `plot(x = ..., y = ..., col = ...)`.
-
-*** =pre_exercise_code
-```{r}
-# You can also prepare your dataset in a specific way in the pre exercise code
-
-library(MindOnStats)
-data(Movies)
-movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
-
-# Clean up the environment
-rm(Movies)
-```
-
-*** =sample_code
-```{r}
-# movie_selection is available in your workspace
-
-# Check out the structure of movie_selection
-
-
-# Select movies that have a rating of 5 or higher: good_movies
-
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
-
-```
-
-*** =solution
-```{r}
-# movie_selection is available in your workspace
-
-# Check out the structure of movie_selection
-str(movie_selection)
-
-# Select movies that have a rating of 5 or higher: good_movies
-good_movies <- movie_selection[movie_selection$Rating >= 5, ]
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
-plot(good_movies$Run, good_movies$Rating, col = good_movies$Genre)
-```
-
-*** =sct
-```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-test_function("str", args = "object",
-              not_called_msg = "You didn't call `str()`!",
-              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
-
-test_object("good_movies")
-
-test_function("plot", args = "x")
-test_function("plot", args = "y")
-test_function("plot", args = "col")
-
-test_error()
-
-success_msg("Good work!")
-```
