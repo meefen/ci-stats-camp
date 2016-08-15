@@ -111,7 +111,7 @@ test_object("x",
 success_msg("Good job! Head over to the next exercise")
 ```
 
---- type:NormalExercise lang:r xp:50 key:03bc384381
+--- type:NormalExercise lang:r xp:50 key:bef890a771
 ## Now, it's time for some math
 
 Check out how Pearson's correlation coefficient, `r` is calcuated in this [page](http://cnx.org/contents/XgdE-Z55@40.9:XEKQgmhr@12/Correlation-Coefficient-and-Co)
