@@ -35,16 +35,79 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 1, feedback_msgs = c(msg2,msg1))
 ```
 
---- type:NormalExercise lang:r xp:100 key:03bc384381
+--- type:MultipleChoiceExercise lang:r xp:50
 ## The Scatterplot
 
-A picture is worth a thousand words. 
+A picture is worth a thousand words. Before diving into correlation coefficients, it is usually very helpful to visualize the data. For two continuous variables, we use a **scatterplot** to inspect their relationship. Consider the following three scatterplots. Which scatterplot shows a weak or neglectable correlation?
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/3c/Strong--weak--no-correlation.png)
 
-Below are several examples of correlations.
+*** =instructions
+- 1
+- 2
+- 3
+
+*** =hint
+Here's a hint: Use your intuition.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sct
+```{r}
+msg1 = "Try again!"
+msg2 = "Well done. Proceed to the next page"
+test_mc(correct = 3, feedback_msgs = c(msg2,msg1))
+```
+
+--- type:NormalExercise lang:r xp:100 key:03bc384381
+## Let's make a Scatterplot!
+
+Below are several additional examples of scatterplots, with underlying correlations illustrated as well. 
+
+- A coefficient of 1 and -1 means a perfect correlation
+- A coefficient of 0 means no correlation
+- A strong correlation, with an absolute value >.60, would show a more *tightly* scattered points
 
 ![](https://upload.wikimedia.org/wikipedia/commons/0/02/Correlation_examples.png)
+
+Now, let's try to make a scatterplot using `R`, a popular statistical language you should learn! A small dataset you have contains two varialbles:
+
+- `years`: Years of teaching experience
+- `outcomes`: A (fictional) score of their teaching performance
+
+*** =instructions
+- To make a scatterplot, you just need to type this line in the R console: `plot(data1$years, data1$outcomes)`
+
+*** =hint
+Image `data1` is a spreadsheet containing two columns -- `years` and `outcomes`.
+
+*** =pre_exercise_code
+```{r}
+# Read data
+data1 = read.csv("https://github.com/meefen/ci-stats-camp/edit/master/data1.csv")
+```
+
+*** =sample_code
+```{r}
+# Plot it
+```
+
+*** =solution
+```{r}
+# Plot it
+plot(data1$years, data1$outcomes)
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("x",
+            incorrect_msg = "Have you correctly plotted the data!")
+success_msg("Good job! Head over to the next exercise")
+```
 
 --- type:NormalExercise lang:r xp:100 key:c986ddf834
 ## Check this lesson
