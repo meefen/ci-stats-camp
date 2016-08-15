@@ -32,7 +32,7 @@ Here's a hint: Ask your former stats teacher, or discuss with anyone around you 
 ```{r}
 msg1 = "Try again!"
 msg2 = "Well done. Proceed to the next page"
-test_mc(correct = 2, feedback_msgs = c(msg1,msg2))
+test_mc(correct = 1, feedback_msgs = c(msg2,msg1))
 ```
 
 --- type:NormalExercise lang:r xp:100 key:03bc384381
