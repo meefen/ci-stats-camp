@@ -83,13 +83,12 @@ Now, let's try to make a scatterplot using `R`, a popular statistical language y
 - To make a scatterplot, you just need to type this line in the R console: `plot(data$years, data$outcomes)`
 
 *** =hint
-Image `data` is a spreadsheet containing two columns -- `years` and `outcomes`.
+To check the data, type `print(data)`.
 
 *** =pre_exercise_code
 ```{r}
 # Read data
 data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(2,8,3,6,6,7,9,8,5,6,7,4))
-print(data)
 ```
 
 *** =sample_code
@@ -109,6 +108,44 @@ plot(data$years, data$outcomes)
 test_error()
 test_object("x",
             incorrect_msg = "Have you correctly plotted the data!")
+success_msg("Good job! Head over to the next exercise")
+```
+
+--- type:NormalExercise lang:r xp:50 key:03bc384381
+## Now, it's time for some math
+
+Check out how Pearson's correlation coefficient, `r` is calcuated in this [page](http://cnx.org/contents/XgdE-Z55@40.9:XEKQgmhr@12/Correlation-Coefficient-and-Co)
+
+Now, we are going to calculate `r` in R, again, with a line of code. 
+
+*** =instructions
+- Using the same dataset we just plotted, type in the following line in the R console: `cor.test(data$years, data$outcomes)`
+
+*** =hint
+To check the data, type `print(data)`.
+
+*** =pre_exercise_code
+```{r}
+# Read data
+data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(2,8,3,6,6,7,9,8,5,6,7,4))
+```
+
+*** =sample_code
+```{r}
+# Calculate the r coeffient
+```
+
+*** =solution
+```{r}
+# Calculate the r coeffient
+cor.test(data$years, data$outcomes)
+```
+
+*** =sct
+```{r}
+test_error()
+test_object("x",
+            incorrect_msg = "Have you correctly calculated r!")
 success_msg("Good job! Head over to the next exercise")
 ```
 
