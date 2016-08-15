@@ -79,15 +79,15 @@ Now, let's try to make a scatterplot using `R`, a popular statistical language y
 - `outcomes`: A (fictional) score of their teaching performance
 
 *** =instructions
-- To make a scatterplot, you just need to type this line in the R console: `plot(data1$years, data1$outcomes)`
+- To make a scatterplot, you just need to type this line in the R console: `plot(data$years, data$outcomes)`
 
 *** =hint
-Image `data1` is a spreadsheet containing two columns -- `years` and `outcomes`.
+Image `data` is a spreadsheet containing two columns -- `years` and `outcomes`.
 
 *** =pre_exercise_code
 ```{r}
 # Read data
-data1 = read.csv("https://github.com/meefen/ci-stats-camp/edit/master/data1.csv")
+data = read.csv("https://raw.githubusercontent.com/meefen/ci-stats-camp/master/datasets/data1.csv")
 ```
 
 *** =sample_code
@@ -98,7 +98,7 @@ data1 = read.csv("https://github.com/meefen/ci-stats-camp/edit/master/data1.csv"
 *** =solution
 ```{r}
 # Plot it
-plot(data1$years, data1$outcomes)
+plot(data$years, data$outcomes)
 ```
 
 *** =sct
