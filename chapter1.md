@@ -4,6 +4,54 @@ description : This module covers correlations in a fun and interactive way.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
+--- type:MultipleChoiceExercise lang:r xp:50
+## What Are Correlations All About?
+
+Correlations are essentially about the relationship between **variables**, in particular, about how the value of one variable changes when the value of another variable changes.
+
+Correlations could be considered for variables of various **[levels of measurement](http://onlinestatbook.com/2/introduction/levels_of_measurement.html)**, even though it is more common to compute correlation between two **continuous** variables. For example, I am interested in the speed I run and my heart rate. In this case, both variables are **ratio**. In another case, I could be also interested in whether my heart rate differs when taking different courses (e.g., Stats, Math, and Pokémon Training). Here, the second variable besides my heart rate is **nominal** or **categorical**. We will have different statistical techniques to measure correlations in different cases. 
+
+A **correlation coefficient** is a numerical index that reflects the relationship between two variables. The value of this descriptive statistic ranges from -1 to +1. When the coefficient is > 0, the correlation is called a **positive** or **direct** correlation; when it is < 0, the correlation is called a **negative** or **indirect** correlation. *Note*: In this case, positive does not mean good and negative does not mean bad. 
+
+Case analysis: The less money you owe to a bank, the less interest you will pay. Is this a positive or negative correlation, or neither?
+
+*** =instructions
+- Positive
+- Negative
+- Neither
+
+*** =hint
+Here's a hint: Ask your former stats teacher, or discuss with anyone around you :)
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sct
+```{r}
+msg1 = "Try again!"
+msg2 = "Well done. Proceed to the next page"
+test_mc(correct = 2, feedback_msgs = c(msg1,msg2))
+```
+
+---
+## The Scatterplot
+
+A picture is worth a thousand words. 
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/3c/Strong--weak--no-correlation.png)
+
+Below are several examples of correlations.
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/02/Correlation_examples.png)
+
+---
+## 
+
+http://varianceexplained.org/RData/lessons/lesson3/segment2/
+
+
 --- type:VideoExercise xp:50 key:ac82ca6647
 ## Correlation vs. Causation (Part 1)
 
@@ -16,10 +64,18 @@ attachments :
 *** =video_link
 //player.vimeo.com/video/115124741
 
+
+---
+## Correlation vs. Linearity
+
+> The Pearson correlation coefficient indicates the strength of a linear relationship between two variables, but its value generally does not completely characterize their relationship.
+
+Consider the following diagram. Four datasets corresponding to the scatterplots have the same correlation of 0.816, but the distribution of the variables is very different.
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/ec/Anscombe%27s_quartet_3.svg)
+
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:21afc4de08
 ## A really bad movie
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ugd4k3dC_8Y" frameborder="0" allowfullscreen></iframe>
 
 Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
 
