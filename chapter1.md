@@ -88,12 +88,13 @@ Image `data` is a spreadsheet containing two columns -- `years` and `outcomes`.
 *** =pre_exercise_code
 ```{r}
 # Read data
-data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(9,1,8,7,6,7,9,5,5,6,7,4))
+data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(2,8,3,6,6,7,9,8,5,6,7,4))
 ```
 
 *** =sample_code
 ```{r}
 # Plot it
+plot(data$years, data$outcomes)
 ```
 
 *** =solution
