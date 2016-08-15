@@ -35,7 +35,7 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 2, feedback_msgs = c(msg1,msg2))
 ```
 
----
+--- type:NormalExercise lang:r xp:100
 ## The Scatterplot
 
 A picture is worth a thousand words. 
@@ -46,8 +46,8 @@ Below are several examples of correlations.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/0/02/Correlation_examples.png)
 
----
-## 
+--- type:NormalExercise lang:r xp:100
+## Check this lesson
 
 http://varianceexplained.org/RData/lessons/lesson3/segment2/
 
@@ -65,7 +65,7 @@ http://varianceexplained.org/RData/lessons/lesson3/segment2/
 //player.vimeo.com/video/115124741
 
 
----
+--- type:MultipleChoiceExercise lang:r xp:50
 ## Correlation vs. Linearity
 
 > The Pearson correlation coefficient indicates the strength of a linear relationship between two variables, but its value generally does not completely characterize their relationship.
