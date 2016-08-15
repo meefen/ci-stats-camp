@@ -106,8 +106,6 @@ plot(data$years, data$outcomes)
 *** =sct
 ```{r}
 test_error()
-test_object("x",
-            incorrect_msg = "Have you correctly plotted the data!")
 success_msg("Good job! Head over to the next exercise")
 ```
 
@@ -144,8 +142,6 @@ cor.test(data$years, data$outcomes)
 *** =sct
 ```{r}
 test_error()
-test_object("x",
-            incorrect_msg = "Have you correctly calculated r!")
 success_msg("Good job! Head over to the next exercise")
 ```
 
@@ -182,8 +178,6 @@ plot(mtcars$mpg, mtcars$hp)
 *** =sct
 ```{r}
 test_error()
-test_object("x",
-            incorrect_msg = "Have you correctly calculated r!")
 success_msg("Good job! Head over to the next exercise")
 ```
 
