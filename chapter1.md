@@ -62,7 +62,7 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 3, feedback_msgs = c(msg2,msg1))
 ```
 
---- type:NormalExercise lang:r xp:100 key:03bc384381
+--- type:NormalExercise lang:r xp:100 key:683b30e66f
 ## Let's make a Scatterplot!
 
 Below are several additional examples of scatterplots, with underlying correlations illustrated as well. 
