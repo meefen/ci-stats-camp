@@ -89,11 +89,12 @@ Image `data` is a spreadsheet containing two columns -- `years` and `outcomes`.
 ```{r}
 # Read data
 data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(2,8,3,6,6,7,9,8,5,6,7,4))
+print(data)
 ```
 
 *** =sample_code
 ```{r}
-# Plot it
+# Plot the data file
 plot(data$years, data$outcomes)
 ```
 
