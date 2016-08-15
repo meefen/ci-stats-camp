@@ -58,8 +58,9 @@ Here's a hint: Use your intuition.
 *** =sct
 ```{r}
 msg1 = "Try again!"
-msg2 = "Well done. Proceed to the next page"
-test_mc(correct = 3, feedback_msgs = c(msg2,msg1))
+msg2 = "Not quite, give it another shot."
+msg3 = "Well done. Proceed to the next page"
+test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
 ```
 
 --- type:NormalExercise lang:r xp:100 key:683b30e66f
@@ -87,7 +88,7 @@ Image `data` is a spreadsheet containing two columns -- `years` and `outcomes`.
 *** =pre_exercise_code
 ```{r}
 # Read data
-data = read.csv("https://raw.githubusercontent.com/meefen/ci-stats-camp/master/datasets/data1.csv")
+data = data.frame(years = c(1,9,1,4,3,3,7,9,7,6,6,1), outcomes = c(9,1,8,7,6,7,9,5,5,6,7,4))
 ```
 
 *** =sample_code
