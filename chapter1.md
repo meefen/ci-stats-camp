@@ -4,7 +4,7 @@ description : This module covers correlations in a fun and interactive way.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:MultipleChoiceExercise lang:r xp:50
+--- type:MultipleChoiceExercise lang:r xp:50 key:88006d35f5
 ## What Are Correlations All About?
 
 Correlations are essentially about the relationship between **variables**, in particular, about how the value of one variable changes when the value of another variable changes.
@@ -35,7 +35,7 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 2, feedback_msgs = c(msg1,msg2))
 ```
 
---- type:NormalExercise lang:r xp:100
+--- type:NormalExercise lang:r xp:100 key:03bc384381
 ## The Scatterplot
 
 A picture is worth a thousand words. 
@@ -46,7 +46,7 @@ Below are several examples of correlations.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/0/02/Correlation_examples.png)
 
---- type:NormalExercise lang:r xp:100
+--- type:NormalExercise lang:r xp:100 key:c986ddf834
 ## Check this lesson
 
 http://varianceexplained.org/RData/lessons/lesson3/segment2/
@@ -65,7 +65,7 @@ http://varianceexplained.org/RData/lessons/lesson3/segment2/
 //player.vimeo.com/video/115124741
 
 
---- type:MultipleChoiceExercise lang:r xp:50
+--- type:MultipleChoiceExercise lang:r xp:50 key:faf1fc56ca
 ## Correlation vs. Linearity
 
 > The Pearson correlation coefficient indicates the strength of a linear relationship between two variables, but its value generally does not completely characterize their relationship.
