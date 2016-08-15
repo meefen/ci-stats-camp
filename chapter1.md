@@ -35,7 +35,7 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 1, feedback_msgs = c(msg2,msg1))
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50
+--- type:MultipleChoiceExercise lang:r xp:50 key:03bc384381
 ## The Scatterplot
 
 A picture is worth a thousand words. Before diving into correlation coefficients, it is usually very helpful to visualize the data. For two continuous variables, we use a **scatterplot** to inspect their relationship. Consider the following three scatterplots. Which scatterplot shows a weak or neglectable correlation?
