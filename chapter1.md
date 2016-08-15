@@ -35,7 +35,7 @@ msg2 = "Well done. Proceed to the next page"
 test_mc(correct = 1, feedback_msgs = c(msg2,msg1))
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50
+--- type:MultipleChoiceExercise lang:r xp:50 key:03bc384381
 ## The Scatterplot
 
 A picture is worth a thousand words. Before diving into correlation coefficients, it is usually very helpful to visualize the data. For two continuous variables, we use a **scatterplot** to inspect their relationship. Consider the following three scatterplots. Which scatterplot shows a weak or neglectable correlation?
@@ -63,7 +63,7 @@ msg3 = "Well done. Proceed to the next page"
 test_mc(correct = 3, feedback_msgs = c(msg1,msg2,msg3))
 ```
 
---- type:NormalExercise lang:r xp:100
+--- type:NormalExercise lang:r xp:100 key:683b30e66f
 ## Let's make a Scatterplot!
 
 Below are several additional examples of scatterplots, with underlying correlations illustrated as well. 
@@ -111,7 +111,7 @@ test_object("x",
 success_msg("Good job! Head over to the next exercise")
 ```
 
---- type:NormalExercise lang:r xp:100
+--- type:NormalExercise lang:r xp:100 key:956084769e
 ## Correlation Coefficient
 
 Check out how Pearson's correlation coefficient, `r` is calcuated in this [page](http://cnx.org/contents/XgdE-Z55@40.9:XEKQgmhr@12/Correlation-Coefficient-and-Co)
@@ -149,7 +149,7 @@ test_object("x",
 success_msg("Good job! Head over to the next exercise")
 ```
 
---- type:NormalExercise lang:r xp:100
+--- type:NormalExercise lang:r xp:100 key:bac8e93a5b
 ## To dive a bit deeper...
 
 Check out this [great tutorial](http://varianceexplained.org/RData/lessons/lesson3/segment2/), and play more. 
